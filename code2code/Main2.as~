@@ -1,0 +1,43 @@
+package 
+{
+    import flash.media.*;
+
+   dynamic public class winJingle extends Sound
+			{
+		var test1:int;
+		var test2:Number=0.5;
+		static var s1:int=3.14;
+		public function Main2()		{
+			if (stage)				init();
+			else				addEventListener(Event.ADDED_TO_STAGE, init);
+			return;
+		}
+		static function testSF():void{
+			s1=123.0; //expression
+		}// end function
+		private function init(e:Event = null):void
+		{
+			removeEventListener(Event.ADDED_TO_STAGE, init);//expression
+			//var csd = new CuanSongDai();
+			// entry point
+			//addChild(new CuanSongDai());
+			var ma=1;
+			var the:MyCuanSongDai2= new MyCuanSongDai2();// (new SceneMain());
+			addChild(the);//expression
+			the.x = 100;//expression
+			the.startRotate();//expression
+		}
+    public function winJingle()
+    {
+        return;
+    }// end function
+        public function processWeaponSwitch(param1:int) : void
+        {
+            var _loc_3:int = 0;
+            var _loc_2:Boolean = false;
+             _loc_3++;
+do{}while(True);
+
+        }// end function
+    }
+}

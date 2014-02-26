@@ -1,0 +1,347 @@
+'package' 31 'package'
+' ' 125 WHITESPACE
+'
+' 124 EOL
+'{' 59 '{'
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'import' 22 'import'
+' ' 125 WHITESPACE
+'flash' 141 IDENTIFIER
+'.' 65 '.'
+'media' 141 IDENTIFIER
+'.' 65 '.'
+'*' 77 '*'
+';' 58 ';'
+'
+' 124 EOL
+'
+' 124 EOL
+'   ' 125 WHITESPACE
+'dynamic' 54 'dynamic'
+' ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'class' 8 'class'
+' ' 125 WHITESPACE
+'winJingle' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'extends' 15 'extends'
+' ' 125 WHITESPACE
+'Sound' 141 IDENTIFIER
+'
+' 124 EOL
+'			' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'		' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'test1' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'		' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'test2' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+'=' 94 '='
+'0.5' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'		' 125 WHITESPACE
+'static' 57 'static'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'s1' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+'=' 94 '='
+'3.14' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'		' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'Main2' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'		' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'			' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'stage' 141 IDENTIFIER
+')' 62 ')'
+'				' 125 WHITESPACE
+'init' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'			' 125 WHITESPACE
+'else' 14 'else'
+'				' 125 WHITESPACE
+'addEventListener' 141 IDENTIFIER
+'(' 61 '('
+'Event' 141 IDENTIFIER
+'.' 65 '.'
+'ADDED_TO_STAGE' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'init' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'			' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'		' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'		' 125 WHITESPACE
+'static' 57 'static'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'testSF' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+':' 93 ':'
+'void' 46 'void'
+'{' 59 '{'
+'
+' 124 EOL
+'			' 125 WHITESPACE
+'s1' 141 IDENTIFIER
+'=' 94 '='
+'123.0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+' ' 125 WHITESPACE
+'//expression
+' 43 'typeof'
+'		' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'		' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'init' 141 IDENTIFIER
+'(' 61 '('
+'e' 141 IDENTIFIER
+':' 93 ':'
+'Event' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'null' 30 'null'
+')' 62 ')'
+':' 93 ':'
+'void' 46 'void'
+'
+' 124 EOL
+'		' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'			' 125 WHITESPACE
+'removeEventListener' 141 IDENTIFIER
+'(' 61 '('
+'Event' 141 IDENTIFIER
+'.' 65 '.'
+'ADDED_TO_STAGE' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'init' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'//expression
+' 43 'typeof'
+'			' 125 WHITESPACE
+'//var csd = new CuanSongDai();
+' 43 'typeof'
+'			' 125 WHITESPACE
+'// entry point
+' 43 'typeof'
+'			' 125 WHITESPACE
+'//addChild(new CuanSongDai());
+' 43 'typeof'
+'			' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'ma' 141 IDENTIFIER
+'=' 94 '='
+'1' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'			' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'the' 141 IDENTIFIER
+':' 93 ':'
+'MyCuanSongDai2' 141 IDENTIFIER
+'=' 94 '='
+' ' 125 WHITESPACE
+'new' 29 'new'
+' ' 125 WHITESPACE
+'MyCuanSongDai2' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'// (new SceneMain());
+' 43 'typeof'
+'			' 125 WHITESPACE
+'addChild' 141 IDENTIFIER
+'(' 61 '('
+'the' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'//expression
+' 43 'typeof'
+'			' 125 WHITESPACE
+'the' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'100' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'//expression
+' 43 'typeof'
+'			' 125 WHITESPACE
+'the' 141 IDENTIFIER
+'.' 65 '.'
+'startRotate' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'//expression
+' 43 'typeof'
+'		' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'winJingle' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'processWeaponSwitch' 141 IDENTIFIER
+'(' 61 '('
+'param1' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+':' 93 ':'
+'Boolean' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'false' 16 'false'
+';' 58 ';'
+'
+' 124 EOL
+'             ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+'++' 80 '++'
+';' 58 ';'
+'
+' 124 EOL
+'	    ' 125 WHITESPACE
+'do' 13 'do'
+'{' 59 '{'
+'}' 60 '}'
+'while' 47 'while'
+'(' 61 '('
+'True' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'    ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'}' 60 '}'
+'
+' 124 EOL

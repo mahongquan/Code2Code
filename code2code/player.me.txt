@@ -1,0 +1,6176 @@
+'package' 31 'package'
+' ' 125 WHITESPACE
+'
+' 124 EOL
+'{' 59 '{'
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'import' 22 'import'
+' ' 125 WHITESPACE
+'bullets' 141 IDENTIFIER
+'.' 65 '.'
+'*' 77 '*'
+';' 58 ';'
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'import' 22 'import'
+' ' 125 WHITESPACE
+'enemyBullets' 141 IDENTIFIER
+'.' 65 '.'
+'*' 77 '*'
+';' 58 ';'
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'import' 22 'import'
+' ' 125 WHITESPACE
+'flash' 141 IDENTIFIER
+'.' 65 '.'
+'display' 141 IDENTIFIER
+'.' 65 '.'
+'*' 77 '*'
+';' 58 ';'
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'import' 22 'import'
+' ' 125 WHITESPACE
+'flash' 141 IDENTIFIER
+'.' 65 '.'
+'geom' 141 IDENTIFIER
+'.' 65 '.'
+'*' 77 '*'
+';' 58 ';'
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'import' 22 'import'
+' ' 125 WHITESPACE
+'gs' 141 IDENTIFIER
+'.' 65 '.'
+'*' 77 '*'
+';' 58 ';'
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'import' 22 'import'
+' ' 125 WHITESPACE
+'gs' 141 IDENTIFIER
+'.' 65 '.'
+'easing' 141 IDENTIFIER
+'.' 65 '.'
+'*' 77 '*'
+';' 58 ';'
+'
+' 124 EOL
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'class' 8 'class'
+' ' 125 WHITESPACE
+'playerJeepController' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'extends' 15 'extends'
+' ' 125 WHITESPACE
+'Object' 141 IDENTIFIER
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'STATS_MOVEMENTSPEED' 141 IDENTIFIER
+':' 93 ':'
+'Array' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'STATS_MOVEMENTACCELERATION' 141 IDENTIFIER
+':' 93 ':'
+'Array' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'STATS_TURRETROTATIONSPEED' 141 IDENTIFIER
+':' 93 ':'
+'Array' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'STATS_ARMORLEVEL' 141 IDENTIFIER
+':' 93 ':'
+'Array' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'parentGameplayController' 141 IDENTIFIER
+':' 93 ':'
+'gameplayController' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'jeepGraphics' 141 IDENTIFIER
+':' 93 ':'
+'MovieClip' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'tracksTimer' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'speedX' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'speedY' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'speedX_MAX' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'5' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'speedY_MAX' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'5' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'acceleration' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0.3' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'xfactor' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'yfactor' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'roofMinigun' 141 IDENTIFIER
+':' 93 ':'
+'MovieClip' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'roofMinigunNext' 141 IDENTIFIER
+':' 93 ':'
+'MovieClip' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'roofMinigunRotationSpeed' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'6' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'hitTestBlock' 141 IDENTIFIER
+':' 93 ':'
+'MovieClip' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'HitPoints' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'HitPointsMAX' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'boundaryXmax' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'boundaryYmax' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'boundaryXmin' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'boundaryYmin' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'wallSlideAmount' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'3' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'onFireCounter' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'onFireCounterMax' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'55' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'onFireDamage' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'2' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'onFireGraphics' 141 IDENTIFIER
+':' 93 ':'
+'MovieClip' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'turretDragDistance' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'playerJeepController' 141 IDENTIFIER
+'(' 61 '('
+'param1' 141 IDENTIFIER
+':' 93 ':'
+'gameplayController' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'param2' 141 IDENTIFIER
+':' 93 ':'
+'Point' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'STATS_MOVEMENTSPEED' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'globalSettings' 141 IDENTIFIER
+'.' 65 '.'
+'STATS_MOVEMENTSPEED' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'STATS_MOVEMENTACCELERATION' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'globalSettings' 141 IDENTIFIER
+'.' 65 '.'
+'STATS_MOVEMENTACCELERATION' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'STATS_TURRETROTATIONSPEED' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'globalSettings' 141 IDENTIFIER
+'.' 65 '.'
+'STATS_TURRETROTATIONSPEED' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'STATS_ARMORLEVEL' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'globalSettings' 141 IDENTIFIER
+'.' 65 '.'
+'STATS_ARMORLEVEL' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'param1' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'xfactor' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'yfactor' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'100' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'new' 29 'new'
+' ' 125 WHITESPACE
+'testJeepGraphicsMC' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'gotoAndStop' 141 IDENTIFIER
+'(' 61 '('
+'1' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRID_HALFSIZE' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRIDSIZE' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'param2' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRID_HALFSIZE' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRIDSIZE' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'param2' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetPlayerEnemiesLayer' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'addChild' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'new' 29 'new'
+' ' 125 WHITESPACE
+'roofMinigunMC' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'gotoAndStop' 141 IDENTIFIER
+'(' 61 '('
+'1' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetPlayerEnemiesLayer' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'addChild' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'hitTestBlock' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'new' 29 'new'
+' ' 125 WHITESPACE
+'playerJeepHittestBlockMC' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'hitTestBlock' 141 IDENTIFIER
+'.' 65 '.'
+'visible' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'false' 16 'false'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetPlayerEnemiesLayer' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'addChild' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'hitTestBlock' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'hitTestBlock' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'hitTestBlock' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'readJeepStats' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryXmax' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'LevelWidth' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRIDSIZE' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRID_HALFSIZE' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryYmax' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'LevelHeight' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRIDSIZE' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRID_HALFSIZE' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryXmin' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRID_HALFSIZE' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryYmin' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRID_HALFSIZE' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'GetHitpointPercentage' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'Number' 141 IDENTIFIER
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPointsMAX' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'PickupHealthBonus' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPointsMAX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'4' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPointsMAX' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPointsMAX' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetHudController' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'ShakeLifebar' 141 IDENTIFIER
+'(' 61 '('
+'5' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'readJeepStats' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetGlobalGameStats' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX_MAX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'STATS_MOVEMENTSPEED' 141 IDENTIFIER
+'[' 63 '['
+'_loc_1' 141 IDENTIFIER
+'.' 65 '.'
+'PLAYERSTATS_MOVEMENTSPEED_LEVEL' 141 IDENTIFIER
+']' 64 ']'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY_MAX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'STATS_MOVEMENTSPEED' 141 IDENTIFIER
+'[' 63 '['
+'_loc_1' 141 IDENTIFIER
+'.' 65 '.'
+'PLAYERSTATS_MOVEMENTSPEED_LEVEL' 141 IDENTIFIER
+']' 64 ']'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'STATS_MOVEMENTACCELERATION' 141 IDENTIFIER
+'[' 63 '['
+'_loc_1' 141 IDENTIFIER
+'.' 65 '.'
+'PLAYERSTATS_MOVEMENTSPEED_LEVEL' 141 IDENTIFIER
+']' 64 ']'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigunRotationSpeed' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'STATS_TURRETROTATIONSPEED' 141 IDENTIFIER
+'[' 63 '['
+'_loc_1' 141 IDENTIFIER
+'.' 65 '.'
+'PLAYERSTATS_TURRETROTATIONSPEED_LEVEL' 141 IDENTIFIER
+']' 64 ']'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'STATS_ARMORLEVEL' 141 IDENTIFIER
+'[' 63 '['
+'_loc_1' 141 IDENTIFIER
+'.' 65 '.'
+'PLAYERSTATS_ARMOR_LEVEL' 141 IDENTIFIER
+']' 64 ']'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetGlobalGameStats' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'GetDiggicultyFactor' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPointsMAX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'GetClosestGridPosition' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'round' 141 IDENTIFIER
+'(' 61 '('
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRID_HALFSIZE' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRIDSIZE' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'round' 141 IDENTIFIER
+'(' 61 '('
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRID_HALFSIZE' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'gameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GRIDSIZE' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+' ' 125 WHITESPACE
+'new' 29 'new'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'(' 61 '('
+'_loc_1' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'MoveHorizontal' 141 IDENTIFIER
+'(' 61 '('
+'param1' 141 IDENTIFIER
+':' 93 ':'
+'Boolean' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'abs' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'>' 68 '>'
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'wallSlideAmount' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'param1' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'wallSlideAmount' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'wallSlideAmount' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'hitTestBlock' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'MoveVertical' 141 IDENTIFIER
+'(' 61 '('
+'param1' 141 IDENTIFIER
+':' 93 ':'
+'Boolean' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'abs' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'>' 68 '>'
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'wallSlideAmount' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'param1' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'wallSlideAmount' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'wallSlideAmount' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'hitTestBlock' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'Update' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'!=' 72 '!='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+' ' 125 WHITESPACE
+'||' 91 '||'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'!=' 72 '!='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'turnJeep' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'turnTracks' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'checkBoundaries' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'processOnFire' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'processTurretDrag' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'hitTestBlock' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'hitTestBlock' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'turnRoofMinigun' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<=' 69 '<='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'ProcessPlayerDeathGameOver' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'processTurretDrag' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'NaN' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'turretDragDistance' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'180' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'PI' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'180' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'turretDragDistance' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'cos' 141 IDENTIFIER
+'(' 61 '('
+'_loc_1' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'turretDragDistance' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'sin' 141 IDENTIFIER
+'(' 61 '('
+'_loc_1' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'turretDragDistance' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'turretDragDistance' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'0.3' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'turretDragDistance' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'turretDragDistance' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'IncreaseTurretDrag' 141 IDENTIFIER
+'(' 61 '('
+'param1' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'turretDragDistance' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'param1' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'turretDragDistance' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'param1' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'IsOnFire' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'Boolean' 141 IDENTIFIER
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'onFireCounter' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'return' 35 'return'
+' ' 125 WHITESPACE
+'true' 41 'true'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+' ' 125 WHITESPACE
+'false' 16 'false'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'processOnFire' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'onFireCounter' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireCounter' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'1' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+'.' 65 '.'
+'onFireCounter' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'random' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'360' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'gotoAndStop' 141 IDENTIFIER
+'(' 61 '('
+'(' 61 '('
+'int' 141 IDENTIFIER
+'(' 61 '('
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'random' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'4' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'1' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'!' 88 '!'
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'LevelCompletionMSGShown' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireDamage' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'onFireCounter' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'==' 71 ==
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'parent' 141 IDENTIFIER
+'.' 65 '.'
+'removeChild' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'onFireGraphics' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireGraphics' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'null' 30 'null'
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetParticlesManager' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'AddBigPileOSmoke' 141 IDENTIFIER
+'(' 61 '('
+'new' 29 'new'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+')' 62 ')'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'ExtinguisFire' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireCounter' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'parent' 141 IDENTIFIER
+'.' 65 '.'
+'removeChild' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'onFireGraphics' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireGraphics' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'null' 30 'null'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'turnTracks' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'tracksTimer' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'==' 71 ==
+' ' 125 WHITESPACE
+'1' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'currentFrame' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'==' 71 ==
+' ' 125 WHITESPACE
+'1' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'gotoAndStop' 141 IDENTIFIER
+'(' 61 '('
+'2' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'gotoAndStop' 141 IDENTIFIER
+'(' 61 '('
+'1' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'tracksTimer' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'tracksTimer' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'1' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+'.' 65 '.'
+'tracksTimer' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'checkBoundaries' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryXmin' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryXmin' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HorizontalCollision' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryXmax' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryXmax' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HorizontalCollision' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryYmin' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryYmin' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'VerticalCollision' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryYmax' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'boundaryYmax' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'VerticalCollision' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'BulletHit' 141 IDENTIFIER
+'(' 61 '('
+'param1' 141 IDENTIFIER
+':' 93 ':'
+'enemyBulletEntity' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'!' 88 '!'
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'LevelCompletionMSGShown' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'HitPoints' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'param1' 141 IDENTIFIER
+'.' 65 '.'
+'damage' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetHudController' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'ShakeLifebar' 141 IDENTIFIER
+'(' 61 '('
+'5' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'param1' 141 IDENTIFIER
+'.' 65 '.'
+'bulletType' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'==' 71 ==
+' ' 125 WHITESPACE
+'enemyBulletEntity' 141 IDENTIFIER
+'.' 65 '.'
+'BULLETTYPE_FLAME' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'StartFire' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'param1' 141 IDENTIFIER
+'.' 65 '.'
+'bulletType' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'!=' 72 '!='
+' ' 125 WHITESPACE
+'enemyBulletEntity' 141 IDENTIFIER
+'.' 65 '.'
+'BULLETTYPE_FLAME' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'&&' 90 '&&'
+' ' 125 WHITESPACE
+'param1' 141 IDENTIFIER
+'.' 65 '.'
+'bulletType' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'!=' 72 '!='
+' ' 125 WHITESPACE
+'enemyBulletEntity' 141 IDENTIFIER
+'.' 65 '.'
+'BULLETTYPE_LASER' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'&&' 90 '&&'
+' ' 125 WHITESPACE
+'param1' 141 IDENTIFIER
+'.' 65 '.'
+'bulletType' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'!=' 72 '!='
+' ' 125 WHITESPACE
+'enemyBulletEntity' 141 IDENTIFIER
+'.' 65 '.'
+'BULLETTYPE_EXPLOSION' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'&&' 90 '&&'
+' ' 125 WHITESPACE
+'param1' 141 IDENTIFIER
+'.' 65 '.'
+'bulletType' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'!=' 72 '!='
+' ' 125 WHITESPACE
+'enemyBulletEntity' 141 IDENTIFIER
+'.' 65 '.'
+'BULLETTYPE_SMARTROCKET' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'soundManager' 141 IDENTIFIER
+'.' 65 '.'
+'playEnemyHitSndSnd' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'param1' 141 IDENTIFIER
+'.' 65 '.'
+'bulletType' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'!=' 72 '!='
+' ' 125 WHITESPACE
+'enemyBulletEntity' 141 IDENTIFIER
+'.' 65 '.'
+'BULLETTYPE_LASER' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'TweenLite' 141 IDENTIFIER
+'.' 65 '.'
+'to' 40 'to'
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+',' 66 ','
+' ' 125 WHITESPACE
+'{' 59 '{'
+'tint' 141 IDENTIFIER
+':' 93 ':'
+'16777215' 139 DEC_NUMBER_LITERAL
+'}' 60 '}'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'TweenLite' 141 IDENTIFIER
+'.' 65 '.'
+'to' 40 'to'
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'0.3' 139 DEC_NUMBER_LITERAL
+',' 66 ','
+' ' 125 WHITESPACE
+'{' 59 '{'
+'removeTint' 141 IDENTIFIER
+':' 93 ':'
+'true' 41 'true'
+'}' 60 '}'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'TweenLite' 141 IDENTIFIER
+'.' 65 '.'
+'to' 40 'to'
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+',' 66 ','
+' ' 125 WHITESPACE
+'{' 59 '{'
+'tint' 141 IDENTIFIER
+':' 93 ':'
+'16711680' 139 DEC_NUMBER_LITERAL
+'}' 60 '}'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'TweenLite' 141 IDENTIFIER
+'.' 65 '.'
+'to' 40 'to'
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'0.3' 139 DEC_NUMBER_LITERAL
+',' 66 ','
+' ' 125 WHITESPACE
+'{' 59 '{'
+'removeTint' 141 IDENTIFIER
+':' 93 ':'
+'true' 41 'true'
+'}' 60 '}'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'StartFire' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'onFireCounter' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireCounter' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireCounterMax' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'40' 139 DEC_NUMBER_LITERAL
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'mainController' 141 IDENTIFIER
+'.' 65 '.'
+'SelectedLevel' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'1' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireCounter' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireCounterMax' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'onFireGraphics' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'new' 29 'new'
+' ' 125 WHITESPACE
+'tankOnFireMC' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'addChild' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'onFireGraphics' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'GetHittestBlock' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'MovieClip' 141 IDENTIFIER
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'hitTestBlock' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'GetGraphics' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'MovieClip' 141 IDENTIFIER
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'VerticalCollision' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'4' 139 DEC_NUMBER_LITERAL
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'5' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'HorizontalCollision' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'4' 139 DEC_NUMBER_LITERAL
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'5' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'GetNewBulletCoords' 141 IDENTIFIER
+'(' 61 '('
+'param1' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'PI' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'180' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'30' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'switch' 37 'switch'
+'(' 61 '('
+'param1' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'case' 6 'case'
+' ' 125 WHITESPACE
+'bulletEntity' 141 IDENTIFIER
+'.' 65 '.'
+'BUTTETTYPE_LASERBULLET' 141 IDENTIFIER
+':' 93 ':'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'21' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'break' 5 'break'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'case' 6 'case'
+' ' 125 WHITESPACE
+'bulletEntity' 141 IDENTIFIER
+'.' 65 '.'
+'BULLETTYPE_SHOTGUN' 141 IDENTIFIER
+':' 93 ':'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'26' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'break' 5 'break'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'case' 6 'case'
+' ' 125 WHITESPACE
+'bulletEntity' 141 IDENTIFIER
+'.' 65 '.'
+'BUTTETTYPE_MINEBULLET' 141 IDENTIFIER
+':' 93 ':'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'break' 5 'break'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'default' 11 'default'
+':' 93 ':'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'break' 5 'break'
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+' ' 125 WHITESPACE
+'new' 29 'new'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'cos' 141 IDENTIFIER
+'(' 61 '('
+'_loc_2' 141 IDENTIFIER
+')' 62 ')'
+',' 66 ','
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'sin' 141 IDENTIFIER
+'(' 61 '('
+'_loc_2' 141 IDENTIFIER
+')' 62 ')'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'GetGraphicsPoint' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+' ' 125 WHITESPACE
+'new' 29 'new'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'GetSpeedPointForMainGun' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'180' 139 DEC_NUMBER_LITERAL
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'PI' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+' ' 125 WHITESPACE
+'new' 29 'new'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'(' 61 '('
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'cos' 141 IDENTIFIER
+'(' 61 '('
+'_loc_1' 141 IDENTIFIER
+')' 62 ')'
+',' 66 ','
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'sin' 141 IDENTIFIER
+'(' 61 '('
+'_loc_1' 141 IDENTIFIER
+')' 62 ')'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'GetGunRotation' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'Number' 141 IDENTIFIER
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'turnRoofMinigun' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'atan2' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetLevelMC' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'mouseY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetLevelMC' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'mouseX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'180' 139 DEC_NUMBER_LITERAL
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'PI' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'(' 61 '('
+'_loc_1' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'%' 79 '%'
+' ' 125 WHITESPACE
+'360' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'!=' 72 '!='
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'%' 79 '%'
+' ' 125 WHITESPACE
+'180' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+' ' 125 WHITESPACE
+'?' 92 '?'
+' ' 125 WHITESPACE
+'(' 61 '('
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'360' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'(' 61 '('
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'360' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'abs' 141 IDENTIFIER
+'(' 61 '('
+'_loc_1' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigunRotationSpeed' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'1' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+' ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigunRotationSpeed' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigunRotationSpeed' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'private' 32 'private'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'turnJeep' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetKeysController' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'RightPressed' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'xfactor' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'1' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+' ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetKeysController' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'LeftPressed' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'xfactor' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'-' 76 '-'
+'1' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'xfactor' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX_MAX' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetKeysController' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'DownPressed' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'yfactor' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'1' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+' ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetKeysController' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'UpPressed' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'yfactor' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'-' 76 '-'
+'1' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'yfactor' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY_MAX' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'atan2' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'yfactor' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'xfactor' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'180' 139 DEC_NUMBER_LITERAL
+' ' 125 WHITESPACE
+'/' 78 '/'
+' ' 125 WHITESPACE
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'PI' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+':' 93 ':'
+'*' 77 '*'
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'(' 61 '('
+'_loc_1' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'%' 79 '%'
+' ' 125 WHITESPACE
+'360' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'!=' 72 '!='
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'%' 79 '%'
+' ' 125 WHITESPACE
+'180' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+' ' 125 WHITESPACE
+'?' 92 '?'
+' ' 125 WHITESPACE
+'(' 61 '('
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'360' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'(' 61 '('
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'360' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'var' 45 'var'
+' ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+':' 93 ':'
+'Number' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'4' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'abs' 141 IDENTIFIER
+'(' 61 '('
+'_loc_2' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'<=' 69 '<='
+' ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'_loc_1' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+' ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'_loc_2' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+'.' 65 '.'
+'rotation' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'_loc_3' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'ProcessControls' 141 IDENTIFIER
+'(' 61 '('
+'param1' 141 IDENTIFIER
+':' 93 ':'
+'controller' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'param1' 141 IDENTIFIER
+'.' 65 '.'
+'RightPressed' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX_MAX' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                        ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                        ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'2' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX_MAX' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX_MAX' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+' ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'param1' 141 IDENTIFIER
+'.' 65 '.'
+'LeftPressed' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'-' 76 '-'
+'this' 38 'this'
+'.' 65 '.'
+'speedX_MAX' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<=' 69 '<='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                        ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                        ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'2' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'-' 76 '-'
+'this' 38 'this'
+'.' 65 '.'
+'speedX_MAX' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'-' 76 '-'
+'this' 38 'this'
+'.' 65 '.'
+'speedX_MAX' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'2' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'else' 14 'else'
+' ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'2' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'abs' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'3' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'param1' 141 IDENTIFIER
+'.' 65 '.'
+'DownPressed' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY_MAX' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                        ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                        ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'2' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY_MAX' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY_MAX' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+' ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'param1' 141 IDENTIFIER
+'.' 65 '.'
+'UpPressed' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'-' 76 '-'
+'this' 38 'this'
+'.' 65 '.'
+'speedY_MAX' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<=' 69 '<='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                        ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                        ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'2' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'-' 76 '-'
+'this' 38 'this'
+'.' 65 '.'
+'speedY_MAX' 141 IDENTIFIER
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'-' 76 '-'
+'this' 38 'this'
+'.' 65 '.'
+'speedY_MAX' 141 IDENTIFIER
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'else' 14 'else'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'>' 68 '>'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'-' 76 '-'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'2' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'else' 14 'else'
+' ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'+' 75 '+'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'2' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'if' 20 'if'
+' ' 125 WHITESPACE
+'(' 61 '('
+'Math' 141 IDENTIFIER
+'.' 65 '.'
+'abs' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+'<' 67 '<'
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'acceleration' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'*' 77 '*'
+' ' 125 WHITESPACE
+'3' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'                    ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'speedY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'                ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'setCurrentTurret' 141 IDENTIFIER
+'(' 61 '('
+'param1' 141 IDENTIFIER
+':' 93 ':'
+'int' 141 IDENTIFIER
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'gotoAndStop' 141 IDENTIFIER
+'(' 61 '('
+'param1' 141 IDENTIFIER
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'scaleX' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0.5' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'scaleY' 141 IDENTIFIER
+' ' 125 WHITESPACE
+'=' 94 '='
+' ' 125 WHITESPACE
+'0.5' 139 DEC_NUMBER_LITERAL
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'TweenLite' 141 IDENTIFIER
+'.' 65 '.'
+'to' 40 'to'
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'1' 139 DEC_NUMBER_LITERAL
+',' 66 ','
+' ' 125 WHITESPACE
+'{' 59 '{'
+'scaleX' 141 IDENTIFIER
+':' 93 ':'
+'1' 139 DEC_NUMBER_LITERAL
+',' 66 ','
+' ' 125 WHITESPACE
+'scaleY' 141 IDENTIFIER
+':' 93 ':'
+'1' 139 DEC_NUMBER_LITERAL
+',' 66 ','
+' ' 125 WHITESPACE
+'ease' 141 IDENTIFIER
+':' 93 ':'
+'Elastic' 141 IDENTIFIER
+'.' 65 '.'
+'easeOut' 141 IDENTIFIER
+'}' 60 '}'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'public' 34 'public'
+' ' 125 WHITESPACE
+'function' 19 'function'
+' ' 125 WHITESPACE
+'processBlowup' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+' ' 125 WHITESPACE
+':' 93 ':'
+' ' 125 WHITESPACE
+'void' 46 'void'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'{' 59 '{'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'soundManager' 141 IDENTIFIER
+'.' 65 '.'
+'PlayExplosionOneSnd' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'TweenLite' 141 IDENTIFIER
+'.' 65 '.'
+'to' 40 'to'
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'jeepGraphics' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+',' 66 ','
+' ' 125 WHITESPACE
+'{' 59 '{'
+'colorMatrixFilter' 141 IDENTIFIER
+':' 93 ':'
+'{' 59 '{'
+'saturation' 141 IDENTIFIER
+':' 93 ':'
+'0.2' 139 DEC_NUMBER_LITERAL
+'}' 60 '}'
+'}' 60 '}'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'TweenLite' 141 IDENTIFIER
+'.' 65 '.'
+'to' 40 'to'
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'0' 139 DEC_NUMBER_LITERAL
+',' 66 ','
+' ' 125 WHITESPACE
+'{' 59 '{'
+'colorMatrixFilter' 141 IDENTIFIER
+':' 93 ':'
+'{' 59 '{'
+'saturation' 141 IDENTIFIER
+':' 93 ':'
+'0.2' 139 DEC_NUMBER_LITERAL
+'}' 60 '}'
+'}' 60 '}'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetParticlesManager' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'AddTempExplosionParticleMC' 141 IDENTIFIER
+'(' 61 '('
+'new' 29 'new'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+')' 62 ')'
+',' 66 ','
+' ' 125 WHITESPACE
+'50' 139 DEC_NUMBER_LITERAL
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetParticlesManager' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'AddBigPileOSmoke' 141 IDENTIFIER
+'(' 61 '('
+'new' 29 'new'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+')' 62 ')'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'parentGameplayController' 141 IDENTIFIER
+'.' 65 '.'
+'GetParticlesManager' 141 IDENTIFIER
+'(' 61 '('
+')' 62 ')'
+'.' 65 '.'
+'addExplosionTestParticle' 141 IDENTIFIER
+'(' 61 '('
+'new' 29 'new'
+' ' 125 WHITESPACE
+'Point' 141 IDENTIFIER
+'(' 61 '('
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'x' 141 IDENTIFIER
+',' 66 ','
+' ' 125 WHITESPACE
+'this' 38 'this'
+'.' 65 '.'
+'roofMinigun' 141 IDENTIFIER
+'.' 65 '.'
+'y' 141 IDENTIFIER
+')' 62 ')'
+')' 62 ')'
+';' 58 ';'
+'
+' 124 EOL
+'            ' 125 WHITESPACE
+'return' 35 'return'
+';' 58 ';'
+'
+' 124 EOL
+'        ' 125 WHITESPACE
+'}' 60 '}'
+'// end function
+' 43 'typeof'
+'
+' 124 EOL
+'    ' 125 WHITESPACE
+'}' 60 '}'
+'
+' 124 EOL
+'}' 60 '}'
+'
+' 124 EOL
