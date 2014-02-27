@@ -64,7 +64,7 @@ def treadfile(inputFileName,srcpath,outputpath):
     f.close()
 
 if __name__=="__main__":
-    #print sys.argv
-    if len(sys.argv) == 2:
-        treadfile(sys.argv[1],"output")
+    s=codecs.open("mulcomment.cpp","r","utf-8").read()
+    s=removeMutilComment(s)
+    print s
 
