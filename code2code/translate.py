@@ -7,7 +7,7 @@ import codecs
 dic={}
 jiacc=["spriteWithFile","actionWithDuration","menuWithItem","itemWithLabel","transitionWithDuration","spriteWithFile","labelWithString","node"]#,"Object","Sprite","Point","Scene","Node","MoveTo","Director","Application","Size","Touch","Event"]
 dic["CCMutableArray"]="CCArray"
-dic["CGFloat"]="CCFloat"
+dic["CGFloat"]="float"
 dic["ccTime"]="float"
 for one in jiacc:
     dic[one]="create"
@@ -67,7 +67,7 @@ def myfind(l,p):
            lr.append(a)
        #print "append"
     return lr
-def main(path):
+def translateDir(path):#
     files=mylistdir(path,"*.cpp")
     files2=mylistdir(path,"*.h")
     for f in files2:
@@ -76,4 +76,4 @@ def main(path):
         fn=path+"/"+f
         treatfile(fn)
 if __name__=="__main__":
-    main(sys.argv[1])
+    translateDir(sys.argv[1])
